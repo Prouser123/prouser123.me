@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" vocab="http://schema.org/" typeof="WebApplication">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SiteList</title>
+    <meta property="browserRequirements" content="requires HTML5 support" />
+    <meta property="storageRequirements" content="Local Storage of browser" />
+    <meta property="countriesSupported" content="en" />
+    <meta property="applicationCategory" content="Data management" />
+    <meta property="creator" content="Prouser123" />
+    <script>'use strict';</script>
+    <script src="src/model/Book.js"></script>
+  </head>
+  <body>
+    <hgroup>
+     <h1>SiteList</h1>
+     <h2>JavaScript app.</h2>
+    </hgroup>
+  <figure style="float:right">
+   <a href="https://plus.google.com/u/0/b/104237216582874489152/104237216582874489152/about">
+   <img property="thumbnailUrl" title="Icon made by Lorc under CC BY 3.0. Available on http://game-icons.net"
+    src="machine-build.svg" width="120" /></a>
+  </figure>
+	<p>Welcome</p>
+    <menu>
+      <li><a href="listBooks.html"><button type="button">List all sites</button></a></li>
+      <li><a href="createBook.html"><button type="button">Add a new site</button></a></li>
+      <li><a href="updateBook.html"><button type="button">Update a site</button></a></li>
+      <li><a href="deleteBook.html"><button type="button">Delete a site</button></a></li>
+      <li><button type="button" onclick="Book.clearData()">Clear database</button></li>
+      <li><button type="button" onclick="Book.createTestData()">Create test data</button></li>
+    </menu>
+	<p>For playing with the app, you may first want to <button type="button" onclick="Book.createTestData()">Create test data</button>
+	and then view it with <a href="listBooks.html"><button type="button">List all books</button></a>.
+  For observing the internal status and error messages, turn on the JavaScript console.</p>
+</body>
+</html>
