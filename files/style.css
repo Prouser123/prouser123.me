@@ -11,7 +11,7 @@ body {
 /* Prouser123 console-esqe title */
 
 #title {
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Source Code Pro', monospace;
     color: white;
     background: black;
@@ -48,3 +48,51 @@ code {
 
 .lime { color: lime }
 .blue { color: blue }
+
+/* Navigation */
+
+nav ul {
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom: 28px;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    background: black;
+    padding: 8px 20px 4px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+nav ul li a {
+    color: white;
+    font-family: Calibri, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Footer Placement */
+
+div.footer {
+    position: fixed;
+    width: 50%;
+    bottom: 10px;
+    font-size: 16px;
+}
+
+/* Footer Links */
+
+a {
+    color: #0088cc;
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus {
+    color: #005580;
+    text-decoration: underline;
+  }
