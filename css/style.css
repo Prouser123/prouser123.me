@@ -96,3 +96,9 @@ a {
     color: #005580;
     text-decoration: underline;
   }
+
+  /* Invert svg img files */
+  .invert_svg {
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+            filter: invert(100%);
+  }
