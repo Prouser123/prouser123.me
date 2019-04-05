@@ -60,6 +60,7 @@
                   console.log(`Duplicate Photo: ${data[i].url}`);
                   continue;
                 }
+
                 if (data[i].tweet.text.startsWith("RT @")) {
                   // variable for the retweet HTML
                   const rtHTML =
@@ -90,6 +91,21 @@
                   }" type="video/mp4">
                   Your browser does not support HTML5 video.
                   </video></center></div>`;
+                }
+
+                // add origin badge / image for retweetStatuses
+                if (data[i].origin == "statuses") {
+                  data[
+                    i
+                  ].tweet.text = "<img height=15 src='origin-512-gold.png'> ".concat(
+                    data[i].tweet.text
+                  );
+                } else {
+                  data[
+                    i
+                  ].tweet.text = "<img height=15 src='origin-512-silver.png'> ".concat(
+                    data[i].tweet.text
+                  );
                 }
 
                 // remove the t.co link from the end of the message
