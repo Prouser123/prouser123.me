@@ -61,15 +61,6 @@
                     "RT ",
                     rtHTML
                   );
-                  // rtUser variable (the username in the tweet message)
-                  const rtUser = data[i].tweet.text
-                    .split(rtHTML)[1]
-                    .split(":")[0];
-                  // replace the username with a link to that user's page
-                  data[i].tweet.text = data[i].tweet.text.replace(
-                    rtUser,
-                    `<a href='https://twitter.com/${rtUser}'>${rtUser}</a>`
-                  );
                 }
                 // photo HTML
                 let mediaHTML = `<a title='Click to see the post on Twitter.' target="_blank" href='${data[i].photo_post_url}'><img width="400" height="300" src='${
@@ -97,7 +88,7 @@
                   data[i].tweet.user.handle
                 }'><p>${data[i].tweet.user.name} - @${
                   data[i].tweet.user.handle
-                }</p></a><p>${data[i].tweet.text}</p></div></div></div>`;
+                }</p></a><p class='message'>${data[i].tweet.text}</p></div></div></div>`;
                 $(".row").append(z);
                 includedMedia.push(data[i].url)
                 
@@ -116,6 +107,14 @@
               if ( entries.length > 0 ) {
                 for (i = 0; i < entries.length; i = i + 1) {
                   entries[i].innerHTML = entries[i].innerHTML.replace(/#(\S+)/g,'<a href="https://twitter.com/hashtag/$1" target="_blank" title="Find more twitter posts tagged with #$1">#$1</a>');
+                }
+              }
+              // username linking
+              entries = document.querySelectorAll('p.message'), i;
+              if ( entries.length > 0 ) {
+                for (i = 0; i < entries.length; i = i + 1) {
+                  console.log(entries[i].innerHTML)
+                  entries[i].innerHTML = entries[i].innerHTML.replace(/@(\S+[\w])/g,'<a href="https://twitter.com/$1" target="_blank">@$1</a>');
                 }
               }
             }
