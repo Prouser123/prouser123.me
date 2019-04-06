@@ -138,9 +138,9 @@
               $(".info").append(
                 `${res.ratelimits.remaining}/${
                   res.ratelimits.limit
-                } twitter api requests remaining.<br>${res.mt}/${
-                  res.ot
-                } tweets contained media.<br>${res.mt -
+                } twitter api requests remaining.<br>${res.stats.media_total}/${
+                  res.stats.api_total
+                } tweets contained media.<br>${res.stats.media_total -
                   includedMedia.length} duplicate images were removed.`
               );
 
