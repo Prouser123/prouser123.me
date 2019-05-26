@@ -48,6 +48,13 @@
       <p class="info"></p>
       <div class="row">
         <script>
+          // Set User Agent
+          $.ajaxSetup({
+            beforeSend: function(request) {
+              request.setRequestHeader("X-User-Agent", "pro/tmm/dogbomb1");
+            }
+          });
+
           // for duplicate checking
           let includedMedia = [];
           $.getJSON(
